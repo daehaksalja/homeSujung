@@ -6,12 +6,55 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style>
+#videobcg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 1920px;
+	min-height: 1080px;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	overflow: hidden;
+}
+</style>
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.4.1.js"
    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
    crossorigin="anonymous"></script>
 </head>
+
+
+<style>
+/* 깔끔하게 스크롤바싹없애는 */
+html, body, div, video {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 0px, 0px, 0px, 0px;
+	margin: 0px, 0px, 0px, 0px;
+	overflow: hidden;
+	background-color: #000;
+}
+
+
+</style>
+
+<link rel="stylesheet" href="../../../resources/css/goodsDetail.css">
 <body>
+
+
+<video id="videobcg" preload="auto" autoplay="true" loop="loop"
+	muted="muted">
+
+	<source src="../../../resources/css/spaceGalaxy.mp4" type="video/mp4">
+
+</video>
+
+
 <div class="admin_content_wrap">
                     <div class="admin_content_subject"><span>상품 상세</span></div>
 
@@ -19,52 +62,52 @@
 
                     		<div class="form_section">
                     			<div class="form_section_title">
-                    				<label>ship 제목</label>
+                    				<label class="menuText">ship 제목</label>
                     			</div>
                     			<div class="form_section_content">
-                    				<input name="shipName" value="<c:out value="${goodsInfo.shipName}"/>" disabled>
+                    				<input class="inputTag" name="shipName" value="<c:out value="${goodsInfo.shipName}"/>" disabled>
                     			</div>
                    			 </div>
                     		<div class="form_section">
                     			<div class="form_section_title">
-                    				<label>등록 날짜</label>
+                    				<label class="menuText">등록 날짜</label>
                     			</div>
                     			<div class="form_section_content">
-                    				<input value="<fmt:formatDate value='${goodsInfo.regDate}' pattern='yyyy-MM-dd'/>" disabled>
+                    				<input  class="inputTag" value="<fmt:formatDate value='${goodsInfo.regDate}' pattern='yyyy-MM-dd'/>" disabled>
                     			</div>
                     		</div>
                     		<div class="form_section">
                     			<div class="form_section_title">
-                    				<label>최근 수정 날짜</label>
+                    				<label class="menuText">최근 수정 날짜</label>
                     			</div>
                     			<div class="form_section_content">
-                    				<input value="<fmt:formatDate value='${goodsInfo.updateDate}' pattern='yyyy-MM-dd'/>" disabled>
+                    				<input  class="inputTag" value="<fmt:formatDate value='${goodsInfo.updateDate}' pattern='yyyy-MM-dd'/>" disabled>
                     			</div>
                     		</div>                    		                    		
                     	
                     		<div class="form_section">
                     			<div class="form_section_title">
-                    				<label>ship 가격</label>
+                    				<label class="menuText">ship 가격</label>
                     			</div>
                     			<div class="form_section_content">
-                    				<input name="shipPrice" value="<c:out value="${goodsInfo.shipPrice}"/>" disabled>
+                    				<input class="inputTag"  name="shipPrice" value="<c:out value="${goodsInfo.shipPrice}"/>" disabled>
                     			</div>
                     		</div>               
                     		<div class="form_section">
                     			<div class="form_section_title">
-                    				<label>ship 재고</label>
+                    				<label class="menuText">ship 재고</label>
                     			</div>
                     			<div class="form_section_content">
-                    				<input name="shipStock" value="<c:out value="${goodsInfo.shipStock}"/>" disabled>
+                    				<input  class="inputTag" name="shipStock" value="<c:out value="${goodsInfo.shipStock}"/>" disabled>
                     			</div>
                     		</div>          
                     	
                     		<div class="form_section">
                     			<div class="form_section_title">
-                    				<label>ship 소개</label>
+                    				<label class="menuText">ship 소개</label>
                     			</div>
                     			<div class="form_section_content bit">
-                    				<textarea name="shipIntro" id="shipIntro_textarea" disabled>${goodsInfo.shipIntro}</textarea>
+                    				<textarea  class="inputTag" name="shipIntro" id="shipIntro_textarea" disabled>${goodsInfo.shipIntro}</textarea>
                     			</div>
                     		</div>        		
                     		

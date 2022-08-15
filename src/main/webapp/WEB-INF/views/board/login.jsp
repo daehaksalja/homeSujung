@@ -46,9 +46,7 @@ body {
 	background-color: #000;
 }
 
-.container {
-	
-}
+
 </style>
 
 <body>
@@ -63,7 +61,7 @@ body {
 		<video id="videobcg" preload="auto" autoplay="true" loop="loop"
 	muted="muted">
 
-	<source src="../../../resources/css/veryGoodSpace.mp4" type="video/mp4">
+	<source src="../../../resources/css/spaceGalaxy.mp4" type="video/mp4">
 
 </video>
 
